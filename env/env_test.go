@@ -32,3 +32,11 @@ func TestGetEnvFallbackEnv(t *testing.T) {
 		t.Errorf("GetEnv didn't return a string\n")
 	}
 }
+
+func TestGetHostname(t *testing.T) {
+	t.Log("Testing GetHostname with: GetHostname()")
+    hostname, _ := os.Hostname()
+    if hostname != GetHostname() {
+        t.Errorf("GetHostname failed")
+    }
+}

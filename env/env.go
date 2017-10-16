@@ -9,3 +9,8 @@ func GetEnv(key, fallback string) string {
         }
         return value
 }
+
+func GetHostname() string {
+    hostname, _ := os.Hostname()
+    return hostname
+} 
